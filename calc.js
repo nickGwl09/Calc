@@ -1,5 +1,4 @@
-
-        let display = document.getElementById('display');
+let display = document.getElementById('display');
         let currentOperand = '';
         let previousOperand = '';
         let operation = null;
@@ -56,7 +55,11 @@
 
         function updateDisplay() {
             display.innerText = currentOperand;
+            if (currentOperand.length > 10) {
+                display.style.fontSize = '1.5em';
+            } else {
+                display.style.fontSize = '2em';
+            }
         }
 
         clearDisplay();
-  
